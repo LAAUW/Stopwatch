@@ -1,0 +1,24 @@
+<StopwatchGrid>:
+    id : timer
+
+    GridLayout:
+        cols: 1
+        size : root.width, root.height
+
+        Label:
+            text: str(timer.time_counter)
+
+        GridLayout:
+            cols:3
+        
+            Button:
+                text: "Start"
+                on_press: timer.start()
+
+            Button:
+                text: "Pause"
+                on_press: timer.pause()
+
+            Button:
+                text: "Stop"
+                on_press: timer.stop()
